@@ -50,7 +50,7 @@ const NoteDetail = () => {
         ←
       </button>
       <div className="w-full max-w-6xl flex items-center justify-center ">
-        <div className="w-full max-w-2xl p-8 rounded-lg shadow-lg  bg-white">
+        <div className="w-full max-w-2xl p-4 rounded-lg shadow-lg  bg-white">
           {note ? (
             <>
               {/* Title Section */}
