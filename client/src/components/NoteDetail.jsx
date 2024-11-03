@@ -11,7 +11,7 @@ const NoteDetail = () => {
     const fetchNoteDetail = async () => {
       const token = localStorage.getItem("token");
       try {
-        const response = await fetch(`http://localhost:5000/api/notes/${id}`, {
+        const response = await fetch(`https://notesapp-qdlm.onrender.com/api/notes/${id}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
