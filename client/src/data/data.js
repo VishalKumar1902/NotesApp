@@ -51,7 +51,7 @@ const faq = [
   {
     question: "Is there a mobile app?",
     answer:
-      "Notely is web applocation available through all type od devices that support internet.",
+      "Notely is web application available through all type of devices that support internet.",
   },
   {
     question: "How do I contact support",
