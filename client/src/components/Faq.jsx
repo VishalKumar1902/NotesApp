@@ -11,7 +11,7 @@ const Faq = () => {
     <div className="bg-gray-50 py-16" id="faq">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center">
-          Frequently asked questions
+          Frequently Asked Questions
         </h2>
         <div className="space-y-4">
           {faq.map((item, index) => (
