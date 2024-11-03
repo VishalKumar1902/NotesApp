@@ -4,7 +4,7 @@ Link;
 import { useAuth } from "../context/AuthContext"; // Import the useAuth hook
 
 const Login = () => {
-  const [email, setEmail] = useState("vishal@abc.com");
+  const [email, setEmail] = useState("demo@abc.com");
   const [password, setPassword] = useState("abc123");
 
   // Get login function from context
