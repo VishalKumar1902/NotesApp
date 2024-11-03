@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
   // Handle signup logic
   const signup = async (name, email, password) => {
     try {
-      const response = await fetch("http://localhost:5000/user/signup", {
+      const response = await fetch("https://notesapp-qdlm.onrender.com/user/signup", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }) => {
   // Login logic
   const login = async (email, password) => {
     try {
-      const response = await fetch("http://localhost:5000/user/login", {
+      const response = await fetch("https://notesapp-qdlm.onrender.com/user/login", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
