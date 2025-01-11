@@ -12,7 +12,7 @@ const Home = () => {
   const { isAuthenticated } = useAuth();
   return (
     <div>
-      <section className="bg-gradient-to-r from-customGradientStart to-customGradientEnd mt-10 py-20">
+      <section className="bg-red-600 mt-10 py-20">
         <div className="container mx-auto px-4 flex flex-col  md:w-6xl ">
           <h1 className="text-4xl text-white pb-6 font-semibold">
             Unlock Your Productivity with
@@ -32,14 +32,17 @@ const Home = () => {
           <div className=" flex space-x-4 pt-4">
             {!isAuthenticated && (
               <a href="#signup">
-                <button className="bg-red-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-yellow-300 hover:text-black transition duration-300 ">
+                <button
+                  className="bg-yellow-300 text-black
+                 font-bold py-2 px-4 rounded-lg hover:opacity-95 transition duration-300 "
+                >
                   Get Started{" "}
                 </button>
               </a>
             )}
 
             <a href="#learn-more">
-              <button className="bg-transparent border border-white font-bold py-2 px-4 text-white rounded-lg hove:bg-white hover:text-gray-100 transition duration-300">
+              <button className="bg-transparent border border-white font-bold py-2 px-4 text-white rounded-lg hover:bg-white hover:text-black transition duration-300">
                 Learn More
               </button>
             </a>
