@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-red-600 p-4 shadow-lg fixed top-0 left-0 w-full ">
+    <nav className="bg-red-600 p-4 shadow-lg fixed top-0 left-0 w-full cursor-pointer">
       <div className="container mx-auto flex justify-between items-center md:w-6xl ">
         <div className="text-white text-2xl font-bold">
           <Link to="/">Notely</Link>
@@ -100,6 +100,7 @@ const Navbar = () => {
               <Link
                 to="/createnotes"
                 className=" block px-6 py-4 text-white hover:text-gray-300 "
+                onClick={() => setIsOpen(false)}
               >
                 Create Note
               </Link>
@@ -115,7 +116,9 @@ const Navbar = () => {
               <p
                 href="#"
                 className=" block px-6 py-4 text-white hover:text-gray-300 "
-                onClick={handleLogout}
+                onClick={() => {
+                  handleLogout(), setIsOpen(false);
+                }}
               >
                 Logout
               </p>
@@ -125,6 +128,7 @@ const Navbar = () => {
               to="/login"
               className="block px-6 py-4 text-white hover:text-gray-300
           "
+              onClick={() => setIsOpen(false)}
             >
               Login
             </Link>
