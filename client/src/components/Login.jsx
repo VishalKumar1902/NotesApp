@@ -4,15 +4,24 @@ Link;
 import { useAuth } from "../context/AuthContext"; // Import the useAuth hook
 
 const Login = () => {
-  const [email, setEmail] = useState("demo@abc.com");
+  const [email, setEmail] = useState("vishal@abc.com");
   const [password, setPassword] = useState("abc123");
+  const [loading, setLoading] = useState(false);
 
   // Get login function from context
   const { login } = useAuth();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    login(email, password);
+    setLoading(true);
+
+    try {
+      await login(email, password);
+    } catch (error) {
+      console.error("Login failed:", error);
+    } finally {
+      setLoading(false); // Reset loading state after login successful or fail
+    }
   };
 
   return (
@@ -43,8 +52,10 @@ const Login = () => {
           hover:bg-yellow-300  
           hover:text-black text-white text-lg py-2 rounded-lg mt-4"
           onClick={handleLogin}
+          disabled={loading} // Disable button while loading is true
         >
-          Login
+          {loading ? "Loading..." : "Login"}{" "}
+          {/* Show Loading when in progress */}
         </button>
         <p className="mt-4 text-center">
           New user ?{" "}
