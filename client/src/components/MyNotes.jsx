@@ -12,7 +12,7 @@ const MyNotes = () => {
     const token = localStorage.getItem("token");
 
     try {
-      const response = await fetch("http://localhost:5000/api/notes", {
+      const response = await fetch("https://notesapp-qdlm.onrender.com/api/notes", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const MyNotes = () => {
     const token = localStorage.getItem("token");
     try {
       const response = await fetch(
-        `http://localhost:5000/api/notes/${noteId}`,
+        `https://notesapp-qdlm.onrender.com/api/notes/${noteId}`,
         {
           method: "DELETE",
           headers: {
