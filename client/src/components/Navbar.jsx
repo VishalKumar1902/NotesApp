@@ -109,6 +109,9 @@ const Navbar = () => {
                 to="/mynotes"
                 className="
           block px-6 py-4  text-white hover:text-gray-300 "
+                onClick={() => {
+                  handleLogout(), setIsOpen(false);
+                }}
               >
                 My Notes
               </Link>
